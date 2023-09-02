@@ -27,3 +27,5 @@ replay_pid*
 .micronaut/
 .build/
 build/
+.idea
+
