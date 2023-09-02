@@ -27,6 +27,14 @@ public class PersonEntity {
         this.id = UUID.randomUUID();
     }
 
+    public PersonEntity(UUID id, String nickname, String name, String birthdate, List<String> stack) {
+        this.nickname = nickname;
+        this.name = name;
+        this.birthday = birthdate;
+        this.stack = stack;
+        this.id = id;
+    }
+
     public PersonEntity(){ }
 
     public UUID getId() {
