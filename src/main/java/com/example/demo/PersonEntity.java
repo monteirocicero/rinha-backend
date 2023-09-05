@@ -1,8 +1,7 @@
 package com.example.demo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
 import java.util.Objects;
@@ -14,6 +13,8 @@ public class PersonEntity {
     @Id
     @GeneratedValue
     private UUID id;
+
+    @Column(unique = true)
     private String nickname;
     private String name;
     private String birthday;

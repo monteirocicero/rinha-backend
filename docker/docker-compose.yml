@@ -43,6 +43,7 @@ services:
 
   db: # Banco de dados
     image: postgres
+    command: postgres -c 'max_connections=450'
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: persons
