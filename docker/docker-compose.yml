@@ -54,4 +54,15 @@ services:
       resources:
         limits:
           cpus: '0.75'
-          memory: '1.5GB'
+          memory: '0.5GB'
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - '6379:6379'
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: '0.5GB'

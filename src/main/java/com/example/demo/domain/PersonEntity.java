@@ -1,14 +1,17 @@
-package com.example.demo;
+package com.example.demo.domain;
 
-import jakarta.persistence.*;
-import jakarta.validation.Valid;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
 @Entity(name = "person")
-public class PersonEntity {
+public class PersonEntity implements Serializable {
 
     @Id
     @GeneratedValue

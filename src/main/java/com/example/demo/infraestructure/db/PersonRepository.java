@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.infraestructure.db;
 
+import com.example.demo.domain.PersonEntity;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

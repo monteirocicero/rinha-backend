@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.api;
 
+import com.example.demo.domain.PersonEntity;
 import jakarta.validation.constraints.NotBlank;
 
 import java.util.Arrays;
