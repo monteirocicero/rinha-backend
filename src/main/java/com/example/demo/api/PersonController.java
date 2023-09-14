@@ -60,12 +60,11 @@ public class PersonController {
             return ResponseEntity.ok().body((PersonEntity) cachedPerson);
         } else {
             var dbPerson = personRepository.findById(personUUID);
-            logger.info("Retrieving from db: " + dbPerson.get().getId());
-
 
             if (dbPerson.isEmpty()) {
                 return ResponseEntity.notFound().build();
             }
+            logger.info("Retrieving from db: " + dbPerson.get().getId());
             redisService.saveObject(dbPerson.get().getId().toString(), dbPerson.get());
 
             return ResponseEntity.ok().body(dbPerson.get());
